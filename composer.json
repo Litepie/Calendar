@@ -1,0 +1,24 @@
+{
+    "name": "lavalite/calendar",
+    "description": "Calendar package for Lavalite",
+    "keywords": ["lavalite", "calendar"],
+    "license": "MIT",
+    "homepage": "https://github.com/Lavalite/Calendar",
+    "authors": [
+        {
+            "name": "Renfos Technologies Pvt. Ltd.",
+            "email": "info@renfos.com"
+        }
+    ],
+    "require": {
+        "lavalite/framework": "~5.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds"
+        ],
+        "psr-4": { 
+            "Lavalite\\Calendar\\": "src" 
+        }
+    }
+}
