@@ -15,7 +15,7 @@
             "database/seeds"
         ],
         "psr-4": { 
-            "Lavalite\\Calendar\\": "src" 
+            "Litepie\\Calendar\\": "src" 
         }
     }
 }
