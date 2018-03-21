@@ -10,9 +10,6 @@
             "email": "info@renfos.com"
         }
     ],
-    "require": {
-        "lavalite/framework": "~3.0"
-    },
     "autoload": {
         "classmap": [
             "database/seeds"
