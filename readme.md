@@ -2,9 +2,9 @@ This is a Litepie package that provides calendar management facility for lavalit
 
 ## Installation
 
-Begin by installing this package through Composer. Edit your project's `composer.json` file to require `lavalite/calendar`.
+Begin by installing this package through Composer. Edit your project's `composer.json` file to require `litepie/calendar`.
 
-    "lavalite/calendar": "dev-master"
+    "litepie/calendar": "dev-master"
 
 Next, update Composer from the Terminal:
 

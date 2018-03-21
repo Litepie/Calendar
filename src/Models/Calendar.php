@@ -19,6 +19,6 @@ class Calendar extends Model
      *
      * @var array
      */
-    protected $config = 'lavalite.calendar.calendar';
+    protected $config = 'litepie.calendar.calendar';
 
 }

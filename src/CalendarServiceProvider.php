@@ -41,7 +41,7 @@ class CalendarServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'lavalite.calendar');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'litepie.calendar');
 
         // Bind facade
         $this->app->bind('calendar', function ($app) {
@@ -89,7 +89,7 @@ class CalendarServiceProvider extends ServiceProvider
     private function publishResources()
     {
         // Publish configuration file
-        $this->publishes([__DIR__ . '/../config/config.php' => config_path('lavalite/calendar.php')], 'config');
+        $this->publishes([__DIR__ . '/../config/config.php' => config_path('litepie/calendar.php')], 'config');
 
         // Publish admin view
         $this->publishes([__DIR__ . '/../resources/views' => base_path('resources/views/vendor/calendar')], 'view');

@@ -24,8 +24,8 @@ class CalendarRepository extends BaseRepository implements CalendarRepositoryInt
      */
     public function model()
     {
-        $this->fieldSearchable = config('lavalite.calendar.calendar.search');
-        return config('lavalite.calendar.calendar.model');
+        $this->fieldSearchable = config('litepie.calendar.calendar.search');
+        return config('litepie.calendar.calendar.model');
     }
 
 
