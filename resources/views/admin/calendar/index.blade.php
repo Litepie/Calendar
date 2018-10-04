@@ -116,8 +116,8 @@ $(function () {
 
         select: function(start, end) {
             $('#event-modal .modal-title').html('Create New Event');
-            start = moment(start).format('DD+MMM+YYYY+h:mm+A');
-            end = moment(end).format('DD+MMM+YYYY+h:mm+A');
+            start = moment(start).format('YYYY-MM-DD+hh:mm:ss');
+            end = moment(end).format('YYYY-MM-DD+hh:mm:ss');
             $('#event-modal .modal-content').load('{{guard_url('calendar/calendar/create')}}?start='+start + '&end='+end);
             $('#event-modal').modal('show');
             var eventData;
@@ -139,8 +139,8 @@ $(function () {
             formData.append('color', $(this).attr("class"));
             formData.append('status', 'Calendar');
             formData.append('title', eventObject.title);
-            formData.append('start', date.format('DD MMM YYYY 09:00 A'));
-            formData.append('end',  date.format('DD MMM YYYY 10:00 A'));
+            formData.append('start', date.format('YYYY-MM-DD hh:mm:ss'));
+            formData.append('end',  date.format('YYYY-MM-DD 10:00::00'));
 
             createEvents(formData, true);     
             if ($('#drop-remove').is(':checked')) {
@@ -151,16 +151,16 @@ $(function () {
 
         eventDrop: function(event, delta, revertFunc) {
             formData = new FormData();  
-            formData.append('start', event.start.format('DD MMM YYYY 09:00 A'));
-            formData.append('end',  event.end.format('DD MMM YYYY 10:00 A'));
+            formData.append('start', event.start.format('YYYY-MM-DD hh:mm:ss'));
+            formData.append('end',  event.end.format('YYYY-MM-DD 10:00:00'));
             formData.append('_method',  'PUT');
             updateEvents(formData, event.id);
         },
 
         eventResize: function(event, delta, revertFunc) {
             formData = new FormData();  
-            formData.append('start', event.start.format('DD MMM YYYY h:mm A'));
-            formData.append('end',  event.end.format('DD MMM YYYY h:mm A'));
+            formData.append('start', event.start.format('YYYY-MM-DD hh:mm:ss'));
+            formData.append('end',  event.end.format('YYYY-MM-DD hh:mm:ss'));
             formData.append('_method',  'PUT');
             updateEvents(formData, event.id);
         }

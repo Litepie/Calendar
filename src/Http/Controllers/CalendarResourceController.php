@@ -84,8 +84,8 @@ class CalendarResourceController extends BaseController
     {
 
         $calendar          = $this->repository->newInstance([]);
-        $calendar['start'] = format_date_time(request('start'));
-        $calendar['end']   = format_date_time(request('end'));
+        $calendar['start'] = request('start');
+        $calendar['end']   = request('end');
 
         Form::populate($calendar);
 
